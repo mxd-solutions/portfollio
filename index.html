@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mujeeb's khan</title>
+</head>
+
+<link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/myportfolio.css">
+<body>
+    
+    <header class="header">
+        <div class="logo">
+            
+            <a href="" class="anim1">portfolio</a>
+        </div>
+      
+            
+            <div class="links menu_responsive">
+                
+                <a href="/htmlfiles/my_portfolio.html">Home</a>
+                <a href="/htmlfiles/my_protfolio_about.html">About</a>
+                <a href="/htmlfiles/my_portfolio._services.html">Services</a>
+                <a href="/htmlfiles/my_portfolio_portfolio.html">portfolio</a>
+                <a href="/htmlfiles/my_portfolio_contact.html">contact</a>
+            </div>
+        
+        <div class="menu_icon">
+            <i class='bx bx-menu menuicon' onclick="togglefun()"></i>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="home">
+            <h2 class="h2">Hello it's me</h2>
+            <h1>Mujeeb-ur-rehman</h1>
+            <h2  class="span animation">and i am a <span class="front"> frontend developer </span></h2>
+            <p>Life time learner</p>
+            <div class="social">
+                <a href="https://www.facebook.com/gfxhasnain"target="_blank"><i class='bx bxl-facebook'></i></a>
+
+                <a href="https://youtube.com/@gfxhasnain12?si=opdD3hN8mAoHcsOy"target="_blank"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.instagram.com/invites/contact/?igsh=67v2mfzma9l1&utm_content=qm93p6v "target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.tiktok.com/@mxd_solutions?is_from_webapp=1&sender_device=pc" target="_blank"><i class='bx bxl-tiktok'></i></a>
+            </div>
+            <div class="btn">
+                <button>Download cv</button>
+            </div>
+        </div>
+        <div class="img">
+            <img src="/pics/WhatsApp Image 2025-03-12 at 15.42.08_75878a4d.jpg" alt="">
+        </div>
+    </section>
+
+    <script>
+        let links = document.querySelector('.menu_responsive')
+        let menuicon = document.querySelector('.menuicon')
+        links.style.maxHeight = '0px'
+        function togglefun(){
+          if(links.style.maxHeight == '0px'){
+            links.style.maxHeight = '27vh'
+          }else{
+            links.style.maxHeight = '0px'
+          }
+        }
+    </script>
+</body>
+</html>
