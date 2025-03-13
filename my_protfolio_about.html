@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -525,4 +526,533 @@ display: flex;
       }
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   
+   html, body {
+    /* font-size: 32px; */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: Helvetica  ;
+}
+
+
+   
+    
+body{
+    background-color: black;
+    color: white;
+}
+
+.container{
+    margin-left: 7%;
+    display: flex;
+    margin-top: 100px;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.rest{
+    margin-right: 5%;
+    margin-left: 20%;
+    margin-top:8%;
+}
+
+h1{
+    color: darkcyan;
+    font-size: 30px;
+    text-transform: capitalize;
+    
+    display: inline-block;
+    animation: a1 4s ease 1 forwards;
+    margin-top: -40px;
+    margin-bottom: -40px;
+    
+   
+}
+p{
+    font-size: 26px;
+}
+@keyframes a1{
+    0%{
+transform: translateX(-100px);
+opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+}
+
+ code{
+  font-size: 26px;
+    line-height: 1.6;
+    text-align: left;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    animation: first  4s ease  1  forwards;
+    
+} 
+@keyframes first{
+0%{
+    transform: translateX(100px); /* Start from 100px to the right */
+    opacity: 0;
+}
+100%{
+transform: translateX(0px);
+opacity: 1;
+}
+}
+button{
+    background-color: darkcyan;
+    /* height: 50px;
+    width: 140px; */
+    padding: 4px;
+    
+    font-size: 22px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px  rgb(122, 208, 236) ;
+    text-transform: capitalize;
+    padding: 8px;
+    margin-top: 50px;
+    animation: second 4s ease  1 forwards ;
+    z-index: 1000;
+    position: relative;
+} 
+.header {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0px;
+  
+  align-content: center;
+  z-index: 1;
+}
+
+.header a {
+  font-size: 25px;
+  color: lightgrey;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: default;
+  padding-right: 40px;
+}
+.header .links {
+  justify-content: space-between;
+  padding-right: 35px;
+  padding-top: 5px !important;
+ 
+  animation: fromright 3s ease 1 forwards;
+}
+a {
+  padding: 5px;
+  padding-top: 10px;
+}
+.header .links a:hover,
+.header .links a.active {
+  color: rgb(2, 145, 145);
+  transition: 0.5s;
+}
+.header .logo a {
+  color: lightgrey;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: default;
+  padding-left: 100px;
+  font-size: 38px;
+  position: relative; /* Ensure that the element can be moved */
+  animation: slideFromleft 3s ease forwards;
+}
+@keyframes slideFromleft {
+  0% {
+    transform: translateX(0px); /* Start from 100px to the right */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px); /* End at its original position */
+    opacity: 1;
+  }
+}
+@keyframes fromright {
+  0% {
+    transform: translateX(100px); /* Start from 100px to the right */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px); /* End at its original position */
+    opacity: 1;
+  }
+}
+@keyframes second{
+    0%{
+     transform: scale(0);
+    }
+    100%{
+    transform: scale(1);
+    }
+}
+/* menu icon*/
+
+.menu_icon{
+display: none;
+
+}
+.menu_icon .menuicon{
+  color: white;
+  margin-right: 20px;
+}
+.img {
+  
+display: flex;
+
+}
+.img img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50% 10% 50% 10%;
+  box-shadow: 0px 0px 7px 5px darkcyan;
+  filter: brightness(50%);
+}
+@media  (max-width: 1024px) {
+  .container{
+    margin-top: 142px;
+  }
+  .header {
+    padding: 10px 5px;
+  }
+  .header .logo a {
+    padding-left: 70px;
+    font-size: 34px;
+  }
+  .header .links {
+    padding-right: 25px;
+    /* animation: fromright 3s ease 1 forwards; */
+  }
+  .header a {
+    font-size: 23px;
+    text-decoration: none;
+    padding-right: 34px;
+  }
+  .container img{
+    width: 300px;
+   
+  }
+  .container .rest h1{
+    font-size:34px ;
+  }
+  .rest code{
+      font-size: 26px !important;
+      text-transform: capitalize;
+    }
+    .rest button {
+    font-size: 20px;
+    margin-top: 32px;
+    font-weight: 400;
+  
+  }
+  button{
+    
+    margin-top: 35px;
+    animation: second 4s ease  1 forwards ;
+    z-index: 1000;
+    position: relative;
+} 
+  
+}
+@media (max-width: 983px)  {
+  .header {
+    padding: 18px 1.5px;
+  }
+  .header .logo a {
+    padding-left: 50px;
+    font-size: 28px;
+  }
+  .header .links {
+    padding-right: 15px;
+    /* animation: fromright 3s ease 1 forwards; */
+  }
+  .header a {
+    font-size: 20px;
+    text-decoration: none;
+    padding-right: 34px;
+  }
+  .rest h1{
+    font-size: 31px;
+  }
+  .rest code{
+      font-size: 24px !important;
+      text-transform: capitalize;
+    }
+  
+  .rest button {
+    font-size: 20px;
+    margin-top: 32px;
+    font-weight: 800;
+  
+  }
+  .img img {
+    width: 275px;
+    margin-bottom: 10px;
+  }
+  
+}
+@media (max-width : 880px){
+  .header {
+    padding: 18px 1px;
+  }
+  .header .logo a {
+    padding-left: 50px;
+    font-size: 30px;
+  }
+  .header .links {
+    padding-right: 12px;
+    /* animation: fromright 3s ease 1 forwards; */
+  }
+  .rest h1{
+
+  }
+  .rest code{
+      font-size: 22px !important;
+      text-transform: capitalize;
+    }
+  .header a {
+    font-size: 24px;
+    text-decoration: none;
+    padding-right: 15px;
+  }
+  .rest button {
+    font-size: 20px;
+    margin-top: 32px;
+    font-weight: 400;
+  
+  }
+}
+@media (max-width : 800px){
+  
+  .menu_responsive{
+    
+    display: flex;
+    width: 100%;
+    height: 27vh;
+    flex-direction: column;
+    text-align: center;
+   background-color: rgba(0, 7, 7, 0.8); 
+    position: absolute;
+    top: 60px;
+    overflow: hidden;
+    transition: all 0.5s;
+  }
+  .menu_responsive a {
+   
+    padding: 0;
+    display: inline-block;
+  
+  }
+  .menu_icon{
+    display: block;
+    z-index: 9;
+     font-size: 32px;
+ 
+  }
+  .rest h1{
+    font-size:29px;
+  }
+  .rest code{
+      font-size: 24px !important;
+      text-transform: capitalize;
+      line-height: 1.2;
+    }
+  .rest button {
+    font-size: 18px;
+    margin-top: 26px;
+    font-weight: 600;
+  
+  }
+  }
+  .img img{
+    width: 260px;
+    
+  }
+  @media (max-width: 715px){
+    .header{
+      padding: 10px 1.5px;
+    }
+    .header .logo a{
+      padding-left: 25px;
+      font-size: 24px;
+    }
+    .container{
+      padding-top: -10px;
+    }
+    .rest h1{
+      font-size: 27px !important;
+
+    }
+    .rest code{
+      font-size: 20px ;
+      text-transform: capitalize;
+    }
+    .img img{
+      min-width: 200px;
+      width: 100%;
+    }
+    .rest button {
+    font-size: 16px;
+    margin-top: 28px;
+    font-weight: 400;
+  
+  }
+
+}
+   @media (max-width: 590px){
+   
+    .rest h1{
+      font-size: 27px !important;
+
+    }
+    .rest code{
+      font-size: 20px !important;
+      text-transform: capitalize;
+    }
+    .rest{
+      margin: -20px;
+     text-align: start;
+     padding: 0 75px;
+    }
+    .container{
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+      margin-left: 0px;
+      
+    
+      
+    }
+    .img img{
+      width: 250px;
+
+      
+    }
+    .rest button {
+    font-size: 16px;
+    margin-top: 28px;
+    font-weight: 400;
+  
+  }
+
+ 
+  }
+  @media (max-width : 477px){
+    .rest{
+      
+     text-align: start;
+     padding: 0 48px;
+    }
+  }
+  @media (max-width : 380px) {
+       .rest h1{
+      font-size: 27px !important;
+
+    }
+    .rest code{
+      font-size: 20px !important;
+      text-transform: capitalize;
+    }
+    .rest{
+      margin: -20px;
+     text-align: start;
+     padding: 0 75px;
+    }
+    .container{
+      display: flex;
+      align-items: center;
+      flex-direction: column-reverse;
+      margin-left: 0px;
+      
+    
+      
+    }
+    .img img{
+      width: 250px;
+
+      
+    }
+    .rest button {
+    font-size: 16px;
+    margin-top: 28px;
+    font-weight: 400;
+  
+  }
+
+ 
+    
+  }
+
+
+</style>
+<link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+<body>
+    <header class="header">
+        <div class="logo">
+            
+            <a href="" class="anim1" >Portfolio</a>
+        </div>
+
+        <div class="links menu_responsive">
+            
+          <a href="index.html">Home</a>
+                <a href="my_protfolio_about.html">About</a>
+                <a href="my_portfolio._services.html">Services</a>
+                <a href="my_portfolio_portfolio.html">portfolio</a>
+                <a href="my_portfolio_contact.html">contact</a>
+        </div>
+
+        <div class="menu_icon">
+          <i class='bx bx-menu menuicon' onclick="togglefun()"></i>
+      </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="img">
+                <img src="/WhatsApp Image 2025-03-12 at 15.42.08_fec12fd1.jpg"">
+            </div>
+            <div class="rest">
+ <h1>About <span class="span">me</span></h1>
+ <br>
+<code>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere modi nobis! just rough tet i will add more
+.</code> <br>
+              
+                <a href="./my_portfolio_contact.html">
+                    <button>contact us</button>
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+      let links = document.querySelector('.menu_responsive')
+      // let menuicon = document.querySelector('.menuicon')
+      links.style.maxHeight = '0px'
+      function togglefun(){
+        if(links.style.maxHeight == '0px'){
+          links.style.maxHeight = '27vh'
+        }else{
+          links.style.maxHeight = '0px'
+        }
+      }
+    </script>
+</body>
+>>>>>>> 81ce73fd2783ee1ac6e6ce49cebacd16dbe8fa82
 </html>
