@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background:rgb(126, 126, 248);
+        
+    }
+    body{
+        width: 100%;
+        height: 90vh;
+        display: grid;
+        place-content: center;
+       
+    }
+    h1{
+        display: grid;
+        place-content: center;
+        color: rgb(131, 13, 13);
+        padding: 8px;
+    }
+    .container{
+   
+        display: grid;
+        grid-template-columns: repeat(3,100px);
+        place-content: center   ;
+        
+    }
+    .container>div{
+        width: 100px;
+        height: 100px;
+        border: 1px solid lightblue;
+        color: lightgreen;
+        font-size: 80px;
+        display: grid;
+        place-content: center;
+      
+    }
+    
+</style>
+<body>
+    <h1>Tic tac toe</h1>
+    <div class="container">
+        
+        <div class="box1" onclick="tictac(this)"></div>
+        <div class="box2" onclick="tictac(this)"></div>
+        <div class="box3" onclick="tictac(this)"></div>
+        <div class="box4" onclick="tictac(this)"></div>
+        <div class="box5" onclick="tictac(this)"></div>
+        <div class="box6" onclick="tictac(this)"></div>
+        <div class="box7" onclick="tictac(this)"></div>
+        <div class="box8" onclick="tictac(this)"></div>
+        <div class="box9" onclick="tictac(this)"></div>
+
+    </div>
+</body>
+<script>
+   let player = 1; 
+let winner = null;
+
+function tictac(yes){
+    if(yes.innerHTML !== ''){
+        return;
+    }
+    winner = check()
+    if(winner){
+        alert(` completed match`)
+        location.reload()
+    }
+    if(player  % 2 != 0){
+        yes.innerHTML = 'X'
+        player++
+    }else if(player % 2 == 0){
+        yes.innerHTML = 'O'
+        player++
+    }
+    winner = check()
+    if(winner){
+        alert(`${winner} has won the match`)
+    }
+    
+}
+
+
+function check() { 
+    let box1 = document.getElementsByClassName('box1')[0].innerHTML; 
+    let box2 = document.getElementsByClassName('box2')[0].innerHTML; 
+    let box3 = document.getElementsByClassName('box3')[0].innerHTML; 
+    let box4 = document.getElementsByClassName('box4')[0].innerHTML; 
+    let box5 = document.getElementsByClassName('box5')[0].innerHTML; 
+    let box6 = document.getElementsByClassName('box6')[0].innerHTML; 
+    let box7 = document.getElementsByClassName('box7')[0].innerHTML; 
+    let box8 = document.getElementsByClassName('box8')[0].innerHTML; 
+    let box9 = document.getElementsByClassName('box9')[0].innerHTML; 
+
+    // Check the first row (box1, box2, box3) for a winner.
+    if (box1 === box2 && box2 === box3 && box1 !== '') return box1; // If all boxes are equal and not empty, return the winner ('X' or 'O').
+
+    // Check the second row (box4, box5, box6) for a winner.
+    if (box4 === box5 && box5 === box6 && box4 !== '') return box4; // Similar check for the second row.
+
+    // Check the third row (box7, box8, box9) for a winner.
+    if (box7 === box8 && box8 === box9 && box7 !== '') return box7; // Similar check for the third row.
+
+    // Check the first column (box1, box4, box7) for a winner.
+    if (box1 === box4 && box4 === box7 && box1 !== '') return box1; // If the first column is all equal and not empty, return the winner.
+
+    // Check the second column (box2, box5, box8) for a winner.
+    if (box2 === box5 && box5 === box8 && box2 !== '') return box2; // Similar check for the second column.
+
+    // Check the third column (box3, box6, box9) for a winner.
+    if (box3 === box6 && box6 === box9 && box3 !== '') return box3; // Similar check for the third column.
+
+    // Check the first diagonal (box1, box5, box9) for a winner.
+    if (box1 === box5 && box5 === box9 && box1 !== '') return box1; // If the first diagonal is all equal and not empty, return the winner.
+
+    // Check the second diagonal (box3, box5, box7) for a winner.
+    if (box3 === box5 && box5 === box7 && box3 !== '') return box3; // Similar check for the second diagonal.
+
+    return null; // If no winner is found, return null, indicating the game is still ongoing.
+}
+
+
+</script>
+</html>
